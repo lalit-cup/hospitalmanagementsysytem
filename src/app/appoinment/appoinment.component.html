@@ -1,0 +1,54 @@
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+  <a style="color: rgb(136, 15, 234);" class="navbar-brand" href="#">LALIT HOSPITALS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <a style="color: rgb(136, 15, 234);" class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/create-appointment">Add Appoinment</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: rgb(136, 15, 234);" class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/admin">Back</a>
+        </li>
+      </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <hr>
+  <h2 style="text-align: center; margin-top: 20px;">Appoinment Dashboard</h2>
+  <a style="color: rgb(11, 201, 235); font-size: x-large;">
+      <marquee behavior="scroll" direction="left">
+          Welcome to Appoinment Dashboard. Please find the patient list below!! Click Appointments to view and update Appointments, Click Add Appointment to add new Appointment
+      </marquee>
+  </a>
+  <hr>
+  <a style="color: rgb(86, 86, 86); font-size: xx-large;">Current Patient List in the Queue</a>
+  <div class="tableFixHead">
+      <br>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Symptom</th>
+      <th>Mobile Number</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let appoiment of appoinments">
+      <td>{{appoiment.id}}</td>
+      <td>{{appoiment.patientName}}</td>
+      <td>{{appoiment.patientAge}}</td>
+      <td>{{appoiment.patientSymptom}}</td>
+      <td>{{appoiment.patientMobileNumber}}</td>
+      <td>
+        <button (click)="delete(appoiment.id)" class="btn btn-danger">Delete</button>
+      </td>
+
+    </tr>
+  </tbody>
+</table>

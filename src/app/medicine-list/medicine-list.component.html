@@ -1,0 +1,43 @@
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+  <a style="color: white;" class="navbar-brand" href="#">LALIT HOSPITALS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a style="color: white;" class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/docdas">Back</a>
+      </li>
+      <li class="nav-item">
+        <a style="color: white;" class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/create-medicine">Add Medicine</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <h2 style="text-align: center; margin-top: 10px;">Medicine Stock</h2>
+  <p style="color: rgb(86, 86, 86); font-size: 25px;">Welcome To Current Medicine List Page. Click Add Medicine to the Medicine List</p>
+  <hr>
+  <div class="tableFixHead">
+    <table class="table table-striped">
+      <thead class="table-header">
+        <tr>
+          <th>ID</th>
+          <th>Drug Name</th>
+          <th>Drug Stock</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let medicine of medicines">
+          <td>{{medicine.id}}</td>
+          <td>{{medicine.drugName}}</td>
+          <td>{{medicine.drugStock}}</td>
+          <button type="submit" class="btn btn-success" (click)="update(medicine.id)">Update</button>
+          <button type="submit" style="margin-left: 10px;" class="btn btn-danger" (click)="delete(medicine.id)">Delete</button>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

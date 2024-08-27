@@ -1,0 +1,48 @@
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+  <a style="color: rgb(136, 15, 234);" class="navbar-brand" href="#">LALIT HOSPITALS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a style="color: rgb(136, 15, 234);" class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/appointmentlist">Back</a>
+        </li>
+      </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <hr>
+  <h2 style="text-align: center; margin-top: 20px; color: cornflowerblue; ">Create Appoinment Form</h2>
+  <a style="color: rgb(11, 201, 235); font-size: x-large;">
+      <marquee behavior="scroll" direction="left" >
+          Welcome to the Create Appoinment Form. To fill the form for the new Patient and Click on the Submit button to save the patient details to the Appoinments Details page.
+      </marquee>
+  </a>
+  <hr>
+  <a style="color: rgb(86, 86, 86); font-size: xx-large;">Create New Appoinment</a>
+  <div class="tableFixHead">
+      <br>
+<div class="container">
+  <h2 class="text-center" >Add New Appointment</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" id="name" class="form-control" name="name" placeholder="Enter the name" [(ngModel)]="appoinment.patientName" />
+    </div>
+    <div class="form-group">
+      <label>Age</label>
+      <input type="number" id="age" class="form-control" name="age" placeholder="Enter the age" [(ngModel)]="appoinment.patientAge" />
+    </div>
+    <div class="form-group">
+      <label>Symptom</label>
+      <input type="text" id="symptom" class="form-control" name="symptom" placeholder="Enter the symptom" [(ngModel)]="appoinment.patientSymptom" />
+    </div>
+    <div class="form-group">
+      <label>Mobile Number</label>
+      <input type="text" id="mobile_number" class="form-control" name="mobile_number" placeholder="Enter the mobile number" [(ngModel)]="appoinment.patientMobileNumber" />
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

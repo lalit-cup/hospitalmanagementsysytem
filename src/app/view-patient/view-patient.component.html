@@ -1,0 +1,130 @@
+<nav class="navbar navbar-expand-lg bg-dark">
+  <a class="navbar-brand text-white" href="#">LALIT HOSPITALS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link active text-white" aria-current="page" href="javascript:void(0);" routerLink="/docdas">Back</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .custom-nav {
+    background: linear-gradient(135deg, #f0f8ff, #d1ecf1);
+    border: 2px solid #d9534f;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .custom-nav:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  .custom-nav h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #d9534f;
+    margin-bottom: 20px;
+  }
+
+  .custom-nav label {
+    font-size: 18px;
+    color: #5a5a5a;
+    transition: color 0.3s ease;
+  }
+
+  .custom-nav b {
+    font-weight: bold;
+    color: #d9534f;
+  }
+
+  .custom-nav .row {
+    margin-bottom: 25px;
+  }
+
+  .custom-nav .col-sm-6 {
+    padding-bottom: 10px;
+  }
+
+  .custom-nav hr {
+    border-color: #d9534f;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    opacity: 0.6;
+  }
+
+  .custom-nav .section-title {
+    font-size: 22px;
+    color: #d9534f;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #d9534f;
+    padding-bottom: 10px;
+    transition: color 0.3s ease;
+  }
+
+  .custom-nav .icon {
+    margin-right: 10px;
+    color: #d9534f;
+    transition: color 0.3s ease;
+  }
+
+  .custom-nav .icon-large {
+    font-size: 1.5em;
+    vertical-align: middle;
+  }
+
+  /* Hover effects */
+  .custom-nav .col-sm-6:hover label,
+  .custom-nav .section-title:hover,
+  .custom-nav .icon:hover {
+    color: #c9302c;
+  }
+</style>
+
+<nav class="container rounded custom-nav">
+  <h2 class="text-center">Patient Information</h2>
+  <div class="section-title">
+    <i class="icon icon-large fas fa-user"></i> Patient Information
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <label><i class="icon fas fa-id-card"></i> Name: <b>{{patient.patientName}}</b></label>
+    </div>
+    <div class="col-sm-6">
+      <label><i class="icon fas fa-birthday-cake"></i> Age: <b>{{patient.patientAge}}</b></label>
+    </div>
+  </div>
+  <hr>
+  <div class="section-title">
+    <i class="icon icon-large fas fa-stethoscope"></i> Medical Details
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <label><i class="icon fas fa-tint"></i> Blood Group: <b>{{patient.patient_Blood_Group}}</b></label>
+    </div>
+    <div class="col-sm-6">
+      <label><i class="icon fas fa-pills"></i> Dose: <b>{{patient.patientDose}}</b></label>
+    </div>
+  </div>
+  <hr>
+  <div class="section-title">
+    <i class="icon icon-large fas fa-info-circle"></i> Additional Information
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <label><i class="icon fas fa-exclamation-circle"></i> Urgency: <b>{{patient.patientUrgency}}</b></label>
+    </div>
+    <div class="col-sm-6">
+      <label><i class="icon fas fa-money-bill-wave"></i> Doctor Fee: <b>{{patient.doctorFee}}</b></label>
+    </div>
+  </div>
+</nav>
